@@ -21,11 +21,13 @@ A staking contract where the investors could stake their DEFI tokens in exchange
 
     Compile the smart contracts:
 
-    python
+    bash
 
-truffle compile
+    truffle compile
 
 Run the migration to deploy the smart contracts:
+
+    bash
 
     truffle migrate
 
