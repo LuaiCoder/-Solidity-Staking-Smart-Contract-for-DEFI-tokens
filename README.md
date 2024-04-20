@@ -31,10 +31,11 @@ A staking contract where the investors could stake their DEFI tokens in exchange
 
 Before running tests, make sure the contracts are compiled and deployed.
 
-truffle test
+    truffle test
 
 This will execute the test scripts in the test/ directory and display the results.
-Test Scenario
+
+## Test Scenario
 Scenario 1: Staking 1000 DEFI for 10 days
 
 This test checks the staking functionality and rewards calculation.
@@ -45,7 +46,20 @@ This test checks the staking functionality and rewards calculation.
 
 Expected Outcome:
 
-    User A should receive the original staked amount plus the calculated rewards.
+    User now has 10,000 tokens for testing
+    User balance before Staking should be 10,000
+    User Balance Before Staking : 10000000000000000000000
+    After Staking 1,000, User Balance should be 9,000
+    User Balance After Staking 1000 tokens: 9000000000000000000000
+    Staked amount should be 1,000
+    Current Staked Amount: 1000000000000000000000
+    should calculate the correct reward for 10 days = 10 (1 DEFI per day) and pay the reward to the user
+    Calculated Reward: 10000000000000000000
+    Reward has been paid to the user
+    Unstaked amount should be Zero
+    Current Staked Amount After Unstake: 0
+    User account should be 10,000 + 10
+    Calculated balanceAfterUnstake: 10010000000000000000000
 
 Contributing
 
