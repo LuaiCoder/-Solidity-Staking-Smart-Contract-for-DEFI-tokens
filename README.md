@@ -19,23 +19,17 @@ A staking contract where the investors could stake their DEFI tokens in exchange
 
 ## Deploy Smart Contract
 
-    Compile the smart contracts:
-
-    bash
+#Compile the smart contracts:
 
     truffle compile
 
-Run the migration to deploy the smart contracts:
-
-    bash
+#Run the migration to deploy the smart contracts:
 
     truffle migrate
 
 ## Run Tests
 
 Before running tests, make sure the contracts are compiled and deployed.
-
-bash
 
 truffle test
 
