@@ -36,6 +36,7 @@ Before running tests, make sure the contracts are compiled and deployed.
 This will execute the test scripts in the test/ directory and display the results.
 
 ## Test Scenario
+
 Scenario 1: Staking 1000 DEFI for 10 days
 
 This test checks the staking functionality and rewards calculation.
@@ -61,9 +62,39 @@ Expected Outcome:
     User account should be 10,000 + 10
     Calculated balanceAfterUnstake: 10010000000000000000000
 
-Contributing
 
-Feel free to contribute to this project by creating issues or pull requests.
-License
+Second Scenario: User A stakes 100 DEFI tokens for 10 days, and stakes 900 DEFI tokens for 10 days later
 
-This project is licensed under the MIT License. See LICENSE for more information.
+This test checks the staking functionality and rewards calculation.
+
+    User A stakes 100 DEFI tokens.
+    Fast-forward 10 days.
+    User A stakes another 900 DEFI tokens after 10 days.
+    Fast-forward another 10 days.
+    User A claims the rewards and unstakes the tokens.
+
+Expected Outcome:
+
+    User now has 10,000 tokens for testing
+    User balance before Staking should be 10,000
+    Calculated BalnaceBeforeST: 10000000000000000000000
+    After Staking 100, user balance should be 9,900
+    Calculated Balance After STaking First 100 tokens: 9900000000000000000000
+    Staked amount should be 100
+    Current Staked Amount: 100000000000000000000
+    No reward because Staked Amount is less than 100
+    Calculated Reward: 0
+    No rewards
+    After Staking another 900, user balance should be 9,000
+    Calculated Balance After Staking Second Time: 9000000000000000000000
+    Staking another 900 tokens to be added to same Staked account, Staked amount should now be 1,000
+    Current Staked Amount : 1000000000000000000000
+    should calculate the correct reward for 10 days = 10 (1 DEFI per day) and pay the reward to the user
+    Calculated Reward: 10000000000000000000
+    Reward has been paid to the user
+    Unstaked amount should be Zero
+    Current Staked Amount After Unstake: 0
+    Final User account should have 1000 tokens plus 10 tokens
+    Calculated balanceAfterWithdraw2: 10010000000000000000000
+
+
